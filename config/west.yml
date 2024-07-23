@@ -1,0 +1,16 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: englmaxi
+      url-base: https://github.com/tokyo2006
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+    - name: zmk-config-inky
+      remote: 
+      revision: master
+  self:
+    path: config

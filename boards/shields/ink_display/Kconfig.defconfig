@@ -1,0 +1,39 @@
+if SHIELD_INK_DISPLAY
+config ZMK_DISPLAY
+    select LV_USE_CONT
+    select LV_FONT_MONTSERRAT_26
+    select LV_FONT_MONTSERRAT_16
+    select LV_USE_LABEL
+    select LV_USE_IMG
+
+choice ZMK_DISPLAY_STATUS_SCREEN
+    default ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+endchoice
+
+config SPI
+    default y
+
+config IL0323
+    default y
+
+config ZMK_DISPLAY_BLANK_ON_IDLE
+    default n
+# Needed for the IL0323 driver which allocs memory to clear the display
+config HEAP_MEM_POOL_SIZE
+    default 1024
+
+ config LV_Z_MEM_POOL_SIZE
+     default 4096
+
+menuconfig CUSTOM_WIDGET_BATTERY_STATUS
+    bool "custom battery status widget"
+
+menuconfig CUSTOM_WIDGET_OUTPUT_STATUS
+    bool "custom output status widget"
+
+menuconfig CUSTOM_WIDGET_LAYER_STATUS
+    bool "custom layer status widget"
+
+menuconfig CUSTOM_WIDGET_PERIPHERAL_STATUS
+    bool "custom peripheral status widget"
+endif
