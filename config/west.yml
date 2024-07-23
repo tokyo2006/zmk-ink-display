@@ -10,7 +10,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-config-inky
-      remote: 
+      remote: zmk-config-inky
       revision: master
   self:
     path: config
