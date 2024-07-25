@@ -26,7 +26,7 @@ config HEAP_MEM_POOL_SIZE
 config LV_Z_MEM_POOL_SIZE
      default 4096
 
-config CONFIG_ZMK_SHOW_LOGO
+config ZMK_SHOW_LOGO
     bool "Show keyboard LOGO"
 
 menuconfig CUSTOM_WIDGET_BATTERY_STATUS
