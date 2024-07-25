@@ -22,8 +22,11 @@ config ZMK_DISPLAY_BLANK_ON_IDLE
 config HEAP_MEM_POOL_SIZE
     default 1024
 
- config LV_Z_MEM_POOL_SIZE
+config LV_Z_MEM_POOL_SIZE
      default 4096
+
+config CONFIG_ZMK_SHOW_LOGO
+    bool "Show keyboard LOGO"
 
 menuconfig CUSTOM_WIDGET_BATTERY_STATUS
     bool "custom battery status widget"
